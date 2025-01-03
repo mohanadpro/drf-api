@@ -68,9 +68,9 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = 'django-insecure-qn!**0mqx5dzwxs_a1#cgs0@vs@-z_ymn2h+w!-w1d**n7ibgp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'drf_api.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'moment-app.herokuapp.com']
 
 
 # Application definition
