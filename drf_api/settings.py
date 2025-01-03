@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-
+import re
 if os.path.exists('env'):
     import env
 
@@ -42,6 +42,11 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%d %b %Y',
 }
 
+if 'CLIENT_ORIGIN_DEV' in os.environ:
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+         r"^https:\/\/.*\.codeinstitute-ide\.net$",
+    ]
+
 if 'DEV' not in os.environ:
     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
         'rest_framework.renderers.JSONRenderer',
@@ -51,6 +56,7 @@ REST_USE_JWT = True
 JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
+# To allow user to logout
 JWT_AUTH_SAMESITE = 'None'
 
 SECRET_KEY = os.getenv('SECRET_KEY')
