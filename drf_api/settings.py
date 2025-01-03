@@ -70,7 +70,7 @@ SECRET_KEY = 'django-insecure-qn!**0mqx5dzwxs_a1#cgs0@vs@-z_ymn2h+w!-w1d**n7ibgp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'moment-app.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'moment-app-5ddf9c7bced4.herokuapp.com']
 
 
 # Application definition
