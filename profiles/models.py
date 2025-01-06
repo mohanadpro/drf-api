@@ -5,7 +5,7 @@ from django.db import models
 # pre_delete activate event before  delete
 from django.db.models.signals import post_save
 from django.contrib.auth.models import User
-
+from models.CloudinaryField import CloudinaryField
 # Create your models here.
 class Profile(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
