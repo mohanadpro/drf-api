@@ -13,9 +13,8 @@ class Profile(models.Model):
     updated_att = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=100, blank=True)
     content = models.TextField(blank=True)
-    image = models.ImageField(
-        upload_to='images/', default='../default_profile_iy5ppe'
-    )
+    image = CloudinaryField('image', default='placeholder')
+
     class Meta:
         ordering = ['-created_at']
     
