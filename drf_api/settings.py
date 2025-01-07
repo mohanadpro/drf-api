@@ -74,6 +74,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'moment-app-5ddf9c7bced4.herokuapp.com',
+    '3000-mohanadpro-momentfronte-d4jbmxhyse1.ws.codeinstitute-ide.net',
     '8000-mohanadpro-drfapi-zm0el8b5hbz.ws.codeinstitute-ide.net']
 
 
