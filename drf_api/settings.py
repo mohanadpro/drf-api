@@ -119,7 +119,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CSRF_TRUSTED_ORIGINS = ["https://8000-mohanadpro-drfapi-zm0el8b5hbz.ws.codeinstitute-ide.net"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-mohanadpro-drfapi-zm0el8b5hbz.ws.codeinstitute-ide.net",
+    "https://3000-mohanadpro-momentfronte-d4jbmxhyse1.ws.codeinstitute-ide.net"
+    ]
 
 if 'CLIENT_ORIGIN' in os.environ:
     print('CLIENT_ORIGIN')
