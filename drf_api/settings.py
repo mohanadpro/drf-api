@@ -31,26 +31,26 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [(
-        'rest_framework.authentication.SessionAuthentication'
-        if 'DEV' in os.environ
-        else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-    )],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
-    'DATETIME_FORMAT': '%d %b %Y',
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [(
+#         'rest_framework.authentication.SessionAuthentication'
+#         if 'DEV' in os.environ
+#         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
+#     )],
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#     'PAGE_SIZE': 10,
+#     'DATETIME_FORMAT': '%d %b %Y',
+# }
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
     CORS_ALLOWED_ORIGIN_REGEXES = [
          r"^https:\/\/.*\.codeinstitute-ide\.net$",
     ]
 
-if 'DEV' not in os.environ:
-    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
-        'rest_framework.renderers.JSONRenderer',
-    ]
+# if 'DEV' not in os.environ:
+#     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
+#         'rest_framework.renderers.JSONRenderer',
+#     ]
 
 REST_USE_JWT = True
 JWT_AUTH_SECURE = True
@@ -76,7 +76,7 @@ SECRET_KEY = 'django-insecure-qn!**0mqx5dzwxs_a1#cgs0@vs@-z_ymn2h+w!-w1d**n7ibgp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'moment-app-5ddf9c7bced4.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'moment-app-5ddf9c7bced4.herokuapp.com','8000-mohanadpro-drfapi-zm0el8b5hbz.ws.codeinstitute-ide.net']
 
 
 # Application definition
